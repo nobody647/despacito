@@ -1,5 +1,6 @@
 from finch import Finch
 from time import sleep
+import random
 
 finch = Finch()
 
@@ -13,6 +14,7 @@ while line:
 		line = fp.readline()
 		continue
 	print(line)
+	finch.led(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 	line.replace(" ", "")
 
 	things = line.split(",")
